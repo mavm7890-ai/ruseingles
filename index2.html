@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inglés en Semanas - Aprende Inglés Rápido</title>
+    
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Librerías Externas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="img/logoingles.png" alt="Inglés en Semanas" class="custom-logo">
+            </div>
+            
+            <div class="desktop-nav">
+                <nav class="nav-links">
+                    <a href="#home">Inicio</a>
+                    <a href="#testimonials">Testimonios</a>
+                    <a href="#ubicaciones">Ubicaciones</a>
+                    <a href="#courses">Cursos</a>
+                    <a href="#books-carousel">Materiales</a>
+                    <a href="#features">Método</a>
+                    <a href="#certificaciones">Certificaciones</a>
+                </nav>
+                
+                <div class="header-cta">
+                    <a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20inscribirme" 
+                       class="cta-button" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        ¡Inscríbete Ahora!
+                    </a>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <nav class="mobile-nav-links">
+                <a href="#home"><i class="fas fa-home"></i> Inicio</a>
+                <a href="#testimonials"><i class="fas fa-star"></i> Testimonios</a>
+                <a href="#ubicaciones"><i class="fas fa-map"></i> Ubicaciones</a>
+                <a href="#courses"><i class="fas fa-book"></i> Cursos</a>
+                <a href="#books-carousel"><i class="fas fa-book-open"></i> Materiales</a>
+                <a href="#features"><i class="fas fa-bolt"></i> Método</a>
+                <a href="#certificaciones"><i class="fas fa-certificate"></i> Certificaciones</a>
+            </nav>
+            <div class="mobile-header-cta">
+                <a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20inscribirme" 
+                   class="cta-button" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    ¡Inscríbete Ahora!
+                </a>
+            </div>
+        </div>
+        
+        <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    </header>
+
+    <!-- WHATSAPP FLOAT BUTTON -->
+    <a href="https://wa.me/525585055361?text=Hola%20quiero%20mas%20informacion" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        <div class="whatsapp-icon-container">
+            <i class="fab fa-whatsapp whatsapp-icon"></i>
+            <div class="whatsapp-text">
+                <span>¡Chatea con nosotros!</span>
+                <span>55 8505 5361</span>
+            </div>
+        </div>
+        <div class="whatsapp-icon-only">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+    </a>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title animate__animated animate__fadeInUp">
+                    Aprende <span>Inglés</span> en 
+                    <span class="weeks animate__animated animate__pulse animate__infinite">20 SEMANAS</span>
+                </h1>
+                <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                    Método innovador y comprobado que te permitirá hablar inglés con fluidez en solo 20 semanas. 
+                    Con más de 23 años de experiencia y miles de estudiantes satisfechos.
+                </p>
+                
+                <div class="hero-badges animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="badge">
+                        <i class="fas fa-check-circle badge-icon"></i>
+                        <span>Método Acelerado</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-users badge-icon"></i>
+                        <span>Clases Grupales e Individuales</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-award badge-icon"></i>
+                        <span>Certificación Internacional</span>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20inscribirme" 
+                   class="cta-button animate__animated animate__fadeInUp animate__delay-3s" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    Comienza Hoy Mismo <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="hero-video animate__animated animate__fadeIn">
+                <div class="video-container">
+                    <video class="video-player" autoplay loop muted playsinline>
+                        <source src="img/vidiodeyoutube.mp4" type="video/mp4">
+                        Tu navegador no soporta videos HTML5.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials-slider">
+                <div class="testimonials-container" id="testimonialsContainer">
+                    <!-- Testimonio 1 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text"> Es una buena escuela, te dan la confianza para preguntar tus dudas, siempre atentos y amables,
+                            se preocupan porque realmente estés comprendiendo cada tema yLos libros muy sencillos de entender, los salones son cómodos 
+                            y el ambiente es agradable 😊</p>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="img/comentario.png" alt="Angeles Sol" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--primary-color), #1e3a5a)'; this.parentElement.innerHTML='M';">
+                            </div>
+                            <div class="author-info">
+                                <h4>Angeles Sol</h4>
+                                <p><i class="fas fa-certificate"></i> Hace 5 meses</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">El profesor Alex es comprometido con sus alumnos y he visto que si necesitan nivelarse les da el apoyo que necesitan.
+
+Estamos contentos y satisfechos con el aprendizaje que mi hijo lleva ya que va por el octavo nivel. Y la meta es que pueda certificarse.</p>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="img/comentario2.png" alt="Juan Pérez" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--primary-color), #1e3a5a)'; this.parentElement.innerHTML='J';">
+                            </div>
+                            <div class="author-info">
+                                <h4>GI aR</h4>
+                                <p><i class="fas fa-certificate"></i> Hace 5 meses</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">
+Tuve el gusto de estar con el profesor Alex y es totalmente recomendable tiene muy buena actitud, tiene el profesionalismo y conocimiento para enseñar de manera eficaz. En cada etapa resolvió mis dudas las veces que fuera necesario.
+Si estás buscando aprender el idioma está institución sería la mejor opción.</p>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="img/comentario3.png" alt="Ana Rodríguez" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--primary-color), #1e3a5a)'; this.parentElement.innerHTML='A';">
+                            </div>
+                            <div class="author-info">
+                                <h4>fany H.</h4>
+                                <p><i class="fas fa-certificate"></i> Hace 10 meses</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio 4 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">Los cursos sabatinos son bastante buenos, te ayudan mucho a practicar, por la organización del programa se verifica que realmente entiendas bien los temas.</p>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="img/comentario4.png" alt="Carlos Mendoza" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--primary-color), #1e3a5a)'; this.parentElement.innerHTML='C';">
+                            </div>
+                            <div class="author-info">
+                                <h4>karumy Velazquez Noriega</h4>
+                                <p><i class="fas fa-certificate"></i> Hace 5 meses</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio 5 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">Es una excelente escuela he aprendido mucho en tan poco tiempo, los maestros te enseñan de la mejor manera y de verdad que si aprendes mucho. La recomiendo</p>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="img/comentario5.png" alt="Laura Fernández" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--primary-color), #1e3a5a)'; this.parentElement.innerHTML='L';">
+                            </div>
+                            <div class="author-info">
+                                <h4>Abigail Bnz</h4>
+                                <p><i class="fas fa-certificate"></i> Hace 10 meses</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio 6 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">Los cursos ofrecidos aquí son ideales para estudiantes de todos los niveles, desde principiantes hasta avanzados. Además, el ambiente acogedor y el enfoque personalizado garantizan una experiencia de aprendizaje efectiva y gratificante para todos los estudiantes. ¡Recomiendo encarecidamente este lugar a cualquiera que busque mejorar su dominio del idioma inglés!"</p>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="img/comentario6.png" alt="Roberto Sánchez" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--primary-color), #1e3a5a)'; this.parentElement.innerHTML='R';">
+                            </div>
+                            <div class="author-info">
+                                <h4>Suemy Torres</h4>
+                                <p><i class="fas fa-certificate"></i> Hace 1 año</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio 7 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">Muy completo y buenas clases. Tienen una dinámica de aprendizaje que se adapta a todas las edades y los grupos pequeños permiten que se aprenda muy bien.
+Los profesores aclaran todas las dudas y están bien capacitados. Se aprende mucho del idioma y me ha servido en la escuela muchísimo.</p>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="img/comentario7.png" alt="Patricia Torres" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, var(--primary-color), #1e3a5a)'; this.parentElement.innerHTML='P';">
+                            </div>
+                            <div class="author-info">
+                                <h4>Michelle Joselyn</h4>
+                                <p><i class="fas fa-certificate"></i> Hace 6 años</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-dots" id="testimonialDots"></div>
+            </div>
+
+            <!-- BOTÓN DE OPINIONES GOOGLE -->
+            <div class="google-reviews-btn">
+                <a href="https://www.google.com/search?sca_esv=5e11387e8a170f54&hl=es-419&biw=1494&bih=715&sxsrf=ANbL-n4tuZuhQ3X5l-YkZBOV5ICoeOQD5g:1772825092846&si=AL3DRZFIhG6pAqfNLal55wUTwygCG0fClF3UxiOmgw9Hq7nbWRZfCcPhXNfUxZJsWuX9P39CoGEXrm1vsEW3SydzbTdKsszYnCigAaS-Ye_FrhVSutx9U-y8sn7QWRsfKoQ8c_tv_-7YqnWvTmCGPGlrWBC3I7uiSw%3D%3D&q=ingl%C3%A9s+en+20+semanas+Opiniones&sa=X&ved=2ahUKEwivxqGPgIyTAxXgLkQIHdcCE8QQ0bkNegQILhAF" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="primary-button">
+                    Ver todas las opiniones en Google <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA UBICACIÓN SECTION -->
+    <section class="new-location" id="new-location">
+        <div class="location-grid">
+            <div class="location-image-wrapper">
+                <img src="img/sedenueva.png" 
+                     alt="Nueva ubicación Santa Fe">
+                <div class="location-badge">
+                    <span>2026</span>
+                    <span>NUEVO</span>
+                </div>
+            </div>
+            <div class="location-content">
+                <div class="location-tag">
+                    <i class="fas fa-map-marker-alt"></i> PRÓXIMAMENTE
+                </div>
+                <h2 class="location-title">
+                    Nueva Ubicación
+                    <span>Plaza Enramada</span>
+                </h2>
+                <p class="location-description">
+                    Estamos emocionados de anunciar la apertura de nuestra nueva sede. 
+                    Un espacio moderno y equipado para que tu experiencia 
+                    de aprendizaje sea aún más increíble.
+                </p>
+                <div class="location-features">
+                    <div class="location-feature">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Apertura: Marzo 2026</span>
+                    </div>
+                    <div class="location-feature">
+                        <i class="fas fa-map-pin"></i>
+                        <span>Local 11 - C. la Enramada 292, Benito Juárez, 57000 Cdad. Nezahualcóyotl, Méx.
+                        </span>
+                    </div>
+                    <div class="location-feature">
+                        <i class="fas fa-clock"></i>
+                        <span>Nuevos horarios</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20saber%20sobre%20la%20nueva%20ubicacion" 
+                   class="location-button" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    Más información <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIONES SECTION -->
+    <section class="ubicaciones" id="ubicaciones">
+        <div class="container">
+            <h2 class="section-title">Nuestras <span>Ubicaciones</span></h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px; color: var(--gray-color); font-size: 1.1rem;">
+                Contamos con dos sedes para brindarte la mejor experiencia de aprendizaje. 
+                ¡Visítanos en la ubicación más cercana!
+            </p>
+            
+            <div class="ubicaciones-grid">
+                <!-- Sede 1 - La Perla -->
+                <div class="ubicacion-card">
+                    <div class="ubicacion-mapa">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.5892781122284!2d-99.00476252478677!3d19.38692898188268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e37fdadf70ab%3A0xe791be5948b1d795!2singl%C3%A9s%20en%2020%20semanas!5e0!3m2!1ses-419!2smx!4v1770925956791!5m2!1ses-419!2smx"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="ubicacion-info">
+                        <div class="ubicacion-titulo">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3> La Perla </h3>
+                        </div>
+                        <div class="ubicacion-direccion">
+                            <i class="fas fa-location-dot"></i>
+                            <span>Jabillos número 30, La Perla, 57820 Cdad. Nezahualcóyotl, Méx.
+                        </div>
+                        <a href="https://maps.app.goo.gl/FsgZy2PB4HWEHzCH7" 
+                           class="ubicacion-boton" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fas fa-directions"></i> Cómo llegar
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Sede 2 - Plaza Enramada -->
+                <div class="ubicacion-card">
+                    <div class="ubicacion-mapa">
+                        <iframe 
+                           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.0158451802736!2d-99.00995872519071!3d19.411721341348066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e3204381ac09%3A0x5509c9e395272fa7!2sPlaza%20Enramada!5e0!3m2!1ses-419!2smx!4v1770926126556!5m2!1ses-419!2smx"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="ubicacion-info">
+                        <div class="ubicacion-titulo">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Plaza Enramada</h3>
+                        </div>
+                        <div class="ubicacion-direccion">
+                            <i class="fas fa-location-dot"></i>
+                            <span>Local 11 - C. la Enramada 292, Benito Juárez, 57000 Cdad. Nezahualcóyotl, Méx.
+                        </div>
+                        <a href="https://maps.app.goo.gl/ZZTzZ4E6VU8Qz36F9" 
+                           class="ubicacion-boton" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                            <i class="fas fa-directions"></i> Cómo llegar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES SECTION -->
+    <section class="courses" id="courses">
+        <div class="container">
+            <h2 class="section-title">Nuestros <span>Cursos</span></h2>
+            <div class="courses-grid">
+                <!-- Curso Básico -->
+                <div class="course-card" data-animation="animate">
+                    <div class="course-header">
+                        <h3 class="course-title">Curso presencial</h3>
+                        <div class="course-weeks">20 Semanas</div>
+                    </div>
+                    <div class="course-content">
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Fluidez total</li>
+                            <li><i class="fas fa-check"></i> Vocabulario especializado</li>
+                            <li><i class="fas fa-check"></i> Pensamiento Logico</li>
+                            <li><i class="fas fa-check"></i> Adaptabilidad Rutinaria</li>
+                            <li><i class="fas fa-check"></i> Certificación internacional</li>
+                        </ul>
+                        <a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20saber%20mas%20sobre%20el%20curso%20presencial" 
+                           class="cta-button" 
+                           target="_blank" 
+                           rel="noopener noreferrer">Más Información</a>
+                    </div>
+                </div>
+                <!-- Curso Intermedio -->
+                <div class="course-card" data-animation="animate" data-animation-delay="0.1s">
+                    <div class="course-header">
+                        <h3 class="course-title">Cuso Personalizado</h3>
+                        <div class="course-weeks">Semanas?</div>
+                    </div>
+                    <div class="course-content">
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Fluidez total</li>
+                            <li><i class="fas fa-check"></i> Vocabulario especializado </li>
+                            <li><i class="fas fa-check"></i> Conversación uno a uno</li>
+                            <li><i class="fas fa-check"></i> Horario Flexible</li>
+                            <li><i class="fas fa-check"></i> Certificación internacional</li>
+                        </ul>
+                        <a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20saber%20mas%20del%20curso%20persoalizado" 
+                           class="cta-button" 
+                           target="_blank" 
+                           rel="noopener noreferrer">Más Información</a>
+                    </div>
+                </div>
+                <!-- Curso Avanzado -->
+                <div class="course-card" data-animation="animate" data-animation-delay="0.2s">
+                    <div class="course-header">
+                        <h3 class="course-title">Curso Privado</h3>
+                        <div class="course-weeks">20 Semanas</div>
+                    </div>
+                    <div class="course-content">
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Fluidez total</li>
+                            <li><i class="fas fa-check"></i> Vocabulario especializado</li>
+                            <li><i class="fas fa-check"></i> Conversación uno a uno</li>
+                            <li><i class="fas fa-check"></i> Pensamiento Logico</li>
+                            <li><i class="fas fa-check"></i> Certificación internacional</li>
+                        </ul>
+                        <a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20saber%20mas%20sobre%20el%20curso%20privado" 
+                           class="cta-button" 
+                           target="_blank" 
+                           rel="noopener noreferrer">Más Información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title animate__animated animate__pulse">¡Domina el Inglés en Tiempo Récord!</h2>
+            <p class="cta-subtitle">Nuestro método acelerado te garantiza hablar inglés con confianza en solo</p>
+            <div class="highlight-number animate__animated animate__heartBeat">20 SEMANAS</div>
+            <p class="cta-subtitle">Muchos estudiantes han logrado sus metas con nosotros. ¡Tú puedes ser el próximo!</p>
+            <a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20inscribirme" 
+               class="cta-button" 
+               style="background-color: white; color: var(--primary-color);">
+                ¡Quiero Aprender Inglés! <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- CARRUSEL DE LIBROS -->
+    <section class="books-carousel" id="books-carousel">
+        <div class="carousel-header">
+            <h2>Nuestros Materiales de Estudio</h2>
+            <p>6 libros especialmente diseñados para cada nivel de aprendizaje</p>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <!-- Libro 1 -->
+                <div class="book-card" onclick="openBookModal(1)">
+                    <div class="book-image">
+                        <img src="img/libro1.png" alt="English Starter" onerror="this.src='https://via.placeholder.com/280x280?text=Libro+1'">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">English Starter</h3>
+                        <span class="book-level">Nivel A1</span>
+                    </div>
+                </div>
+                <!-- Libro 2 -->
+                <div class="book-card" onclick="openBookModal(2)">
+                    <div class="book-image">
+                        <img src="img/libro2.png" alt="Grammar Foundation" onerror="this.src='https://via.placeholder.com/280x280?text=Libro+2'">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">Grammar Foundation</h3>
+                        <span class="book-level">Nivel A2</span>
+                    </div>
+                </div>
+                <!-- Libro 3 -->
+                <div class="book-card" onclick="openBookModal(3)">
+                    <div class="book-image">
+                        <img src="img/libro3.png" alt="Conversation Skills" onerror="this.src='https://via.placeholder.com/280x280?text=Libro+3'">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">Conversation Skills</h3>
+                        <span class="book-level">Nivel B1</span>
+                    </div>
+                </div>
+                <!-- Libro 4 -->
+                <div class="book-card" onclick="openBookModal(4)">
+                    <div class="book-image">
+                        <img src="img/libro4.png" alt="Business English" onerror="this.src='https://via.placeholder.com/280x280?text=Libro+4'">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">English Communication</h3>
+                        <span class="book-level">Nivel B2</span>
+                    </div>
+                </div>
+                <!-- Libro 5 -->
+                <div class="book-card" onclick="openBookModal(5)">
+                    <div class="book-image">
+                        <img src="img/libro5.png" alt="Advanced Grammar" onerror="this.src='https://via.placeholder.com/280x280?text=Libro+5'">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">Advanced Grammar</h3>
+                        <span class="book-level">Nivel C1</span>
+                    </div>
+                </div>
+                <!-- Libro 6 -->
+                <div class="book-card" onclick="openBookModal(6)">
+                    <div class="book-image">
+                        <img src="img/libro6.png" alt="TOEFL Preparation" onerror="this.src='https://via.placeholder.com/280x280?text=Libro+6'">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">Final Preparation</h3>
+                        <span class="book-level">Nivel C2</span>
+                    </div>
+                </div>
+                <!-- Libro 1 (duplicado para bucle infinito) -->
+                <div class="book-card" onclick="openBookModal(1)">
+                    <div class="book-image">
+                        <img src="img/libro1.png" alt="English Starter" onerror="this.src='https://via.placeholder.com/280x280?text=Libro+1'">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">English Starter</h3>
+                        <span class="book-level">Nivel A1</span>
+                    </div>
+                </div>
+                <!-- Libro 2 (duplicado para bucle infinito) -->
+                <div class="book-card" onclick="openBookModal(2)">
+                    <div class="book-image">
+                        <img src="img/libro2.png" alt="Grammar Foundation" onerror="this.src='https://via.placeholder.com/280x280?text=Libro+2'">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">Grammar Foundation</h3>
+                        <span class="book-level">Nivel A2</span>
+                    </div>
+                </div>
+                <!-- Libro 3 (duplicado para bucle infinito) -->
+                <div class="book-card" onclick="openBookModal(3)">
+                    <div class="book-image">
+                        <img src="img/libro3.png" alt="Conversation Skills" onerror="this.src='https://via.placeholder.com/280x280?text=Libro+3'">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">Conversation Skills</h3>
+                        <span class="book-level">Nivel B1</span>
+                    </div>
+                </div>
+                <!-- Libro 4 (duplicado para bucle infinito) -->
+                <div class="book-card" onclick="openBookModal(4)">
+                    <div class="book-image">
+                        <img src="img/libro4.png" alt="Business English" onerror="this.src='https://via.placeholder.com/280x280?text=Libro+4'">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">English Communication</h3>
+                        <span class="book-level">Nivel B2</span>
+                    </div>
+                </div>
+                <!-- Libro 5 (duplicado para bucle infinito) -->
+                <div class="book-card" onclick="openBookModal(5)">
+                    <div class="book-image">
+                        <img src="img/libro5.png" alt="Advanced Grammar" onerror="this.src='https://via.placeholder.com/280x280?text=Libro+5'">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">Advanced Grammar</h3>
+                        <span class="book-level">Nivel C1</span>
+                    </div>
+                </div>
+                <!-- Libro 6 (duplicado para bucle infinito) -->
+                <div class="book-card" onclick="openBookModal(6)">
+                    <div class="book-image">
+                        <img src="img/libro6.png" alt="TOEFL Preparation" onerror="this.src='https://via.placeholder.com/280x280?text=Libro+6'">
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">Final Preparation</h3>
+                        <span class="book-level">Nivel C2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Nuestro <span>Método Exclusivo</span></h2>
+            <div class="features-grid">
+                <div class="feature-card" data-animation="animate" onclick="openModal('mision')">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3 class="feature-title">Aprendizaje Acelerado</h3>
+                    <p>Nuestro método se enfoca en la conversación desde el primer día, acelerando tu aprendizaje hasta 3 veces más rápido que los métodos tradicionales.</p>
+                </div>
+                <div class="feature-card" data-animation="animate" data-animation-delay="0.1s" onclick="openModal('profesor')">
+                    <div class="feature-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3 class="feature-title">Profesores Certificados</h3>
+                    <p>Todos nuestros instructores cuentan con certificación internacional y amplia experiencia en la enseñanza del inglés.</p>
+                </div>
+                <div class="feature-card" data-animation="animate" data-animation-delay="0.2s" onclick="openModal('instituciones')">
+                    <div class="feature-icon"><i class="fas fa-laptop-house"></i></div>
+                    <h3 class="feature-title">Modalidad Flexible</h3>
+                    <p>Elige entre clases presenciales en la institucion, privadas o personalizadas. Adaptamos el horario a tus necesidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL SECTION -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal-container" id="modalContainer">
+            <div class="modal-header">
+                <h2 id="modalTitle">Título</h2>
+                <div class="modal-close" onclick="closeModal(event)">×</div>
+            </div>
+            <div class="modal-content" id="modalContent">
+                <!-- El contenido se carga dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CERTIFICACIONES SECTION -->
+    <section class="certificaciones" id="certificaciones">
+        <div class="container">
+            <div class="certificaciones-container">
+                <div class="certificaciones-content">
+                    <div class="certificaciones-badge">
+                        <i class="fas fa-certificate"></i> Acreditaciones Internacionales
+                    </div>
+                    <h2 class="certificaciones-title">
+                        Certificaciones <span>Oficiales</span>
+                    </h2>
+                    <p class="certificaciones-description">
+                        Obtén certificaciones reconocidas internacionalmente que avalan tu nivel de inglés. 
+                        Nuestros cursos están alineados con los estándares más altos.
+                    </p>
+                    <ul class="certificaciones-list">
+                        <li><i class="fas fa-check-circle"></i> CONNI - Certificación Nacional de Nivel de Idioma</li>
+                        <li><i class="fas fa-check-circle"></i> Oxford University Press - Exámenes internacionales</li>
+                    </ul>
+                    <a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20saber%20mas%20de%20sus%20certificaciones" 
+                       class="certificaciones-button" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        Conoce más <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="certificaciones-image">
+                    <img src="img/certi.png" alt="Certificaciones CONNI y Oxford">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo-section">
+                <div class="footer-logo">
+                    <img src="img/logocirc.png" alt="Inglés en Semanas">
+                </div>
+                <p class="footer-description">Más de 23 años enseñando inglés con un método acelerado y efectivo. Miles de estudiantes satisfechos que ahora dominan el idioma.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ingles20sem/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/inglesen20semanas?" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@ingles_en_20_semanas" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/525585055361?text=Hola%2C%20estoy%20interesad%20me%20pueden%20dar%20mas%20informacion%20para%20inscribirme" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-cursos">
+                <h3 class="footer-heading">Cursos</h3>
+                <ul class="footer-links">
+                    <li><a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20saber%20mas%20sobre%20el%20curso%20presencial" target="_blank" rel="noopener noreferrer">Inglés Avanzado (20 semanas)</a></li>
+                    <li><a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20saber%20mas%20del%20curso%20persoalizado" target="_blank" rel="noopener noreferrer">Clases Personalizadas</a></li>
+                    <li><a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20saber%20mas%20sobre%20el%20curso%20privado" target="_blank" rel="noopener noreferrer">Clases Privadas</a></li>
+                </ul>
+
+                <h3 class="footer-heading">Certificaciones</h3>
+                <ul class="footer-links">
+                    <li><a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20saber%20mas%20sobre%20las%20certificaciones" target="_blank" rel="noopener noreferrer">CENNI Certificacion Nacional de Nivel de Idioma</a></li>
+                    <li><a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20saber%20mas%20sobre%20las%20certificaciones" target="_blank" rel="noopener noreferrer">OXFORD University Press</a></li>
+                </ul>      
+            </div>
+            
+            <div class="footer-contacto">
+                <h3 class="footer-heading">Contacto</h3>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:5585055361">55 85 05 53 61</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/525585055361?text=Hola%2C%20quiero%20inscribirme" target="_blank" rel="noopener noreferrer">55 85 05 53 61 (WhatsApp)</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:inglesen20semanas@gmail.com?subject=Información&body=Hola%2C%20quiero%20saber%20mas">inglesen20semanas@gmail.com</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://maps.app.goo.gl/FsgZy2PB4HWEHzCH7" target="_blank" rel="noopener noreferrer">Sucursal La Perla</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://maps.app.goo.gl/ZZTzZ4E6VU8Qz36F9" target="_blank" rel="noopener noreferrer">Sucursal Plaza Enramada</a>
+                </div>          
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Inglés en 20 Semanas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Externo -->
+    <script src="js/main.js"></script>
+</body>
+</html>
