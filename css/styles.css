@@ -307,6 +307,61 @@ header {
     text-decoration: none !important;
 }
 
+/* ===== BACK TO TOP BUTTON ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    border: 2px solid var(--secondary-color);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+        bottom: 25px;
+        left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        bottom: 20px;
+        left: 15px;
+    }
+}
+
 /* ===== HERO SECTION ===== */
 .hero {
     padding: 180px 0 120px;
@@ -418,7 +473,7 @@ header {
     cursor: pointer;
 }
 
-/* ===== TESTIMONIALS SECTION - SIN TÍTULO Y CENTRADO ===== */
+/* ===== TESTIMONIALS SECTION ===== */
 .testimonials {
     padding: 100px 0 80px;
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
@@ -480,10 +535,6 @@ header {
     color: var(--star-color);
     font-size: 1.3rem;
     text-shadow: 0 2px 5px rgba(255, 193, 7, 0.3);
-}
-
-.testimonial-stars i.far {
-    color: #e0e0e0;
 }
 
 .testimonial-author {
@@ -1371,8 +1422,10 @@ header {
     font-size: 2rem;
     color: var(--primary-color);
     margin: 0;
+    padding-right: 40px;
 }
 
+/* Estilos mejorados para el botón de cierre - SIEMPRE CIRCULAR */
 .modal-close {
     width: 40px;
     height: 40px;
@@ -1382,10 +1435,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
     transition: var(--transition);
     border: none;
+    line-height: 1;
+    padding: 0;
+    font-weight: 400;
+    flex-shrink: 0;
+    margin-left: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .modal-close:hover {
@@ -1393,42 +1452,52 @@ header {
     transform: rotate(90deg);
 }
 
+@media (max-width: 768px) {
+    .modal-header {
+        padding: 15px 20px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.5rem;
+        padding-right: 30px;
+    }
+    
+    .modal-close {
+        width: 36px;
+        height: 36px;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-header {
+        padding: 12px 15px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.3rem;
+        padding-right: 25px;
+    }
+    
+    .modal-close {
+        width: 32px;
+        height: 32px;
+        font-size: 1.5rem;
+    }
+}
+
 .modal-content {
     padding: 0;
-    overflow-y: auto;
+    overflow: hidden;
     flex: 1;
 }
 
-/* Desktop - sin scroll */
-@media (min-width: 769px) {
-    .modal-content {
-        overflow-y: hidden;
-    }
-    
-    .modal-content .modal-grid,
-    .modal-content .modal-profesor {
-        height: calc(90vh - 80px);
-        overflow-y: hidden;
-    }
-}
-
-/* Móvil - con scroll */
-@media (max-width: 768px) {
-    .modal-content {
-        overflow-y: auto;
-        max-height: calc(90vh - 80px);
-    }
-    
-    .modal-content .modal-grid,
-    .modal-content .modal-profesor {
-        overflow-y: visible;
-    }
-}
-
+/* Modal grid base */
 .modal-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100%;
+    min-height: 500px;
 }
 
 .modal-grid .modal-image {
@@ -1447,35 +1516,26 @@ header {
     padding: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
     overflow-y: auto;
+    text-align: left;
 }
 
-/* Estilos para el modal del profesor (versión sin carrusel) */
-.modal-profesor {
-    padding: 20px 40px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-text h3 {
+.modal-grid .modal-text h3 {
     font-size: 1.8rem;
     color: var(--secondary-color);
     margin-bottom: 20px;
 }
 
-.modal-text p {
+.modal-grid .modal-text p {
     font-size: 1rem;
     color: var(--gray-color);
-    line-height: 1.8;
+    line-height: 1.6;
     margin-bottom: 15px;
 }
 
-.modal-text .highlight {
+.modal-grid .modal-text .highlight {
     font-weight: 600;
     color: var(--primary-color);
 }
@@ -1500,24 +1560,474 @@ header {
     font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
-    .modal-grid {
-        grid-template-columns: 1fr;
-        height: auto;
-    }
-    
-    .modal-grid .modal-image {
-        height: 250px;
-    }
-    
+/* Estilos optimizados para el modal de Aprendizaje Acelerado (mision) */
+.mision-modal .modal-text {
+    padding: 35px;
+    justify-content: flex-start;
+}
+
+.mision-modal .modal-text h3 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.mision-modal .modal-text p {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.mision-modal .modal-text .highlight {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.mision-modal .modal-list li {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* Estilos optimizados para el modal de Modalidad Flexible (instituciones) */
+.instituciones-modal .modal-text {
+    padding: 35px;
+    justify-content: flex-start;
+}
+
+.instituciones-modal .modal-text h3 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.instituciones-modal .modal-text p {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.instituciones-modal .modal-list {
+    margin-top: 10px;
+}
+
+.instituciones-modal .modal-list li {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.instituciones-modal .modal-list li i {
+    font-size: 1.1rem;
+    width: 22px;
+}
+
+/* Estilos mejorados para el modal del profesor (centro) */
+.modal-profesor {
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.modal-profesor .profesor-content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.modal-profesor .profesor-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 4px solid var(--secondary-color);
+    box-shadow: var(--shadow);
+}
+
+.modal-profesor .profesor-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-profesor .profesor-nombre {
+    font-size: 1.7rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.modal-profesor .profesor-cargo {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.modal-profesor .profesor-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.modal-profesor .stat-item {
+    text-align: center;
+    padding: 12px;
+    background: rgba(212, 175, 55, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.modal-profesor .stat-item i {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+}
+
+.modal-profesor .stat-item h4 {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.modal-profesor .stat-item p {
+    font-size: 0.85rem;
+    color: var(--gray-color);
+}
+
+/* Estilos optimizados para el modal de libros */
+.book-modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    min-height: 500px;
+}
+
+.book-modal-grid .book-modal-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.book-modal-grid .book-modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-modal-grid .book-modal-text {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.book-modal-grid .book-modal-text h3 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.book-modal-grid .book-modal-text .highlight {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.book-modal-grid .book-modal-text p {
+    font-size: 1rem;
+    color: var(--gray-color);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.book-modal-grid .modal-list {
+    margin-top: 5px;
+}
+
+.book-modal-grid .modal-list li {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* Responsive para todos los modales */
+@media (min-width: 769px) and (max-width: 1200px) {
     .modal-grid .modal-text {
         padding: 30px;
+    }
+    
+    .modal-grid .modal-text h3 {
+        font-size: 1.6rem;
+    }
+    
+    .mision-modal .modal-text,
+    .instituciones-modal .modal-text {
+        padding: 25px;
+    }
+    
+    .mision-modal .modal-text h3,
+    .instituciones-modal .modal-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .book-modal-grid .book-modal-text {
+        padding: 30px;
+    }
+    
+    .book-modal-grid .book-modal-text h3 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-grid,
+    .book-modal-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        max-height: 80vh;
+    }
+    
+    .modal-grid .modal-image,
+    .book-modal-grid .book-modal-image {
+        height: 220px;
+    }
+    
+    .modal-grid .modal-text,
+    .book-modal-grid .book-modal-text,
+    .mision-modal .modal-text,
+    .instituciones-modal .modal-text {
+        padding: 25px 20px 30px 20px;
         height: auto;
+        text-align: center;
+        justify-content: flex-start;
+        overflow-y: auto;
+        max-height: 400px;
+    }
+    
+    .modal-grid .modal-text h3,
+    .book-modal-grid .book-modal-text h3,
+    .mision-modal .modal-text h3,
+    .instituciones-modal .modal-text h3 {
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .modal-grid .modal-text p,
+    .book-modal-grid .book-modal-text p,
+    .mision-modal .modal-text p,
+    .instituciones-modal .modal-text p {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 18px;
+    }
+    
+    .modal-grid .modal-list,
+    .book-modal-grid .modal-list,
+    .mision-modal .modal-list,
+    .instituciones-modal .modal-list {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .modal-grid .modal-list li,
+    .book-modal-grid .modal-list li,
+    .mision-modal .modal-list li,
+    .instituciones-modal .modal-list li {
+        justify-content: center;
+        font-size: 1rem;
+        margin-bottom: 15px;
+        padding: 0 5px;
+    }
+    
+    /* Ajuste específico para el primer modal (Aprendizaje Acelerado) en móvil */
+    .mision-modal .modal-image {
+        height: 200px;
+    }
+    
+    .mision-modal .modal-text {
+        padding: 20px 20px 30px 20px;
+        max-height: 450px;
+    }
+    
+    .mision-modal .modal-text p {
+        margin-bottom: 15px;
+    }
+    
+    /* Ajuste específico para el segundo modal (Modalidad Flexible) en móvil */
+    .instituciones-modal .modal-image {
+        height: 200px;
+    }
+    
+    .instituciones-modal .modal-text {
+        padding: 20px 20px 30px 20px;
+        max-height: 450px;
+    }
+    
+    .instituciones-modal .modal-list li {
+        margin-bottom: 12px;
+    }
+    
+    /* Ajustes específicos para modales de libros en móvil */
+    .book-modal-grid .book-modal-image {
+        height: 220px;
+    }
+    
+    .book-modal-grid .book-modal-text {
+        padding: 25px 20px 30px 20px;
+        max-height: 450px;
+    }
+    
+    .book-modal-grid .book-modal-text h3 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    
+    .book-modal-grid .book-modal-text .highlight {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .book-modal-grid .book-modal-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 18px;
+    }
+    
+    .book-modal-grid .modal-list li {
+        font-size: 1rem;
+        margin-bottom: 15px;
     }
     
     .modal-profesor {
-        padding: 15px 20px;
+        padding: 20px;
         height: auto;
+        min-height: auto;
+    }
+    
+    .modal-profesor .profesor-avatar {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .modal-profesor .profesor-nombre {
+        font-size: 1.4rem;
+    }
+    
+    .modal-profesor .profesor-cargo {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+    
+    .modal-profesor .profesor-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-grid .modal-image,
+    .book-modal-grid .book-modal-image {
+        height: 180px;
+    }
+    
+    .modal-grid .modal-text,
+    .book-modal-grid .book-modal-text,
+    .mision-modal .modal-text,
+    .instituciones-modal .modal-text {
+        padding: 20px 15px 25px 15px;
+        max-height: 400px;
+    }
+    
+    .modal-grid .modal-text h3,
+    .book-modal-grid .book-modal-text h3,
+    .mision-modal .modal-text h3,
+    .instituciones-modal .modal-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-grid .modal-text p,
+    .book-modal-grid .book-modal-text p,
+    .mision-modal .modal-text p,
+    .instituciones-modal .modal-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    
+    /* Ajuste específico para el primer modal (Aprendizaje Acelerado) en móvil pequeño */
+    .mision-modal .modal-image {
+        height: 160px;
+    }
+    
+    .mision-modal .modal-text {
+        padding: 15px 15px 25px 15px;
+    }
+    
+    .mision-modal .modal-text p {
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+    }
+    
+    .instituciones-modal .modal-image {
+        height: 160px;
+    }
+    
+    .instituciones-modal .modal-text {
+        padding: 15px 15px 25px 15px;
+    }
+    
+    /* Ajustes para modales de libros en móvil pequeño */
+    .book-modal-grid .book-modal-image {
+        height: 170px;
+    }
+    
+    .book-modal-grid .book-modal-text {
+        padding: 15px 15px 25px 15px;
+        max-height: 380px;
+    }
+    
+    .book-modal-grid .book-modal-text h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+    
+    .book-modal-grid .book-modal-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 14px;
+    }
+    
+    .book-modal-grid .modal-list li {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+    
+    .modal-profesor {
+        padding: 15px;
+    }
+    
+    .modal-profesor .profesor-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .modal-profesor .profesor-nombre {
+        font-size: 1.3rem;
     }
 }
 
@@ -2094,10 +2604,16 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 15px;
+        width: 100%;
     }
     .location-feature {
         width: 100%;
         justify-content: center;
+        text-align: center;
+    }
+    .location-feature span {
+        text-align: center;
+        word-break: break-word;
     }
     .location-badge {
         width: 70px;
@@ -2244,6 +2760,14 @@ footer {
     .location-description {
         font-size: 0.95rem;
         margin-bottom: 25px;
+    }
+    .location-feature {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    .location-feature i {
+        margin-bottom: 5px;
     }
     .location-badge {
         width: 60px;
