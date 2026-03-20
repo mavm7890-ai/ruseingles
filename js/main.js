@@ -32,6 +32,17 @@ document.querySelectorAll('.mobile-nav-links a').forEach(link => {
     });
 });
 
+// Back to Top Button
+const backToTopButton = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
+});
+
 // Testimonials Slider
 const testimonialsContainer = document.getElementById('testimonialsContainer');
 const testimonialDots = document.getElementById('testimonialDots');
@@ -162,7 +173,7 @@ function openModal(type) {
         case 'mision':
             title = 'Aprendizaje Acelerado';
             content = `
-                <div class="modal-grid">
+                <div class="modal-grid mision-modal">
                     <div class="modal-image">
                         <img src="img/apren.jpg" alt="Aprendizaje Acelerado" onerror="this.src='https://via.placeholder.com/500x500?text=Aprendizaje+acelerado'">
                     </div>
@@ -184,28 +195,28 @@ function openModal(type) {
             title = 'Profesores Certificados';
             content = `
                 <div class="modal-profesor">
-                    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                        <div style="width: 150px; height: 150px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px; border: 4px solid var(--secondary-color); box-shadow: var(--shadow);">
-                            <img src="img/teacher.png" alt="Profesor Alex Martinez" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://via.placeholder.com/150x150?text=Alex'">
+                    <div class="profesor-content">
+                        <div class="profesor-avatar">
+                            <img src="img/teacher.png" alt="Profesor Alex Martinez" onerror="this.src='https://via.placeholder.com/150x150?text=Alex'">
                         </div>
-                        <h3 style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 5px;">Alex Martinez Franco</h3>
-                        <p style="font-size: 1.1rem; color: var(--secondary-color); font-weight: 600; margin-bottom: 25px;">Director Académico</p>
+                        <h3 class="profesor-nombre">Alex Martinez Franco</h3>
+                        <p class="profesor-cargo">Director Académico</p>
                         
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 20px 0;">
-                            <div style="text-align: center; padding: 15px; background: rgba(212, 175, 55, 0.05); border-radius: 10px; border: 1px solid rgba(212, 175, 55, 0.2);">
-                                <i class="fas fa-globe-americas" style="font-size: 1.8rem; color: var(--secondary-color); margin-bottom: 10px;"></i>
-                                <h4 style="font-size: 1rem; color: var(--primary-color); margin-bottom: 5px;">Especialidad</h4>
-                                <p style="font-size: 0.9rem; color: var(--gray-color);">Lic. en Idiomas</p>
+                        <div class="profesor-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-globe-americas"></i>
+                                <h4>Especialidad</h4>
+                                <p>Lic. en Idiomas</p>
                             </div>
-                            <div style="text-align: center; padding: 15px; background: rgba(212, 175, 55, 0.05); border-radius: 10px; border: 1px solid rgba(212, 175, 55, 0.2);">
-                                <i class="fas fa-clock" style="font-size: 1.8rem; color: var(--secondary-color); margin-bottom: 10px;"></i>
-                                <h4 style="font-size: 1rem; color: var(--primary-color); margin-bottom: 5px;">Experiencia</h4>
-                                <p style="font-size: 0.9rem; color: var(--gray-color);">20 años</p>
+                            <div class="stat-item">
+                                <i class="fas fa-clock"></i>
+                                <h4>Experiencia</h4>
+                                <p>20 años</p>
                             </div>
-                            <div style="text-align: center; padding: 15px; background: rgba(212, 175, 55, 0.05); border-radius: 10px; border: 1px solid rgba(212, 175, 55, 0.2);">
-                                <i class="fas fa-certificate" style="font-size: 1.8rem; color: var(--secondary-color); margin-bottom: 10px;"></i>
-                                <h4 style="font-size: 1rem; color: var(--primary-color); margin-bottom: 5px;">Certificación</h4>
-                                <p style="font-size: 0.9rem; color: var(--gray-color);">Internacional</p>
+                            <div class="stat-item">
+                                <i class="fas fa-certificate"></i>
+                                <h4>Certificación</h4>
+                                <p>Internacional</p>
                             </div>
                         </div>
                     </div>
@@ -215,7 +226,7 @@ function openModal(type) {
         case 'instituciones':
             title = 'Modalidad Flexible';
             content = `
-                <div class="modal-grid">
+                <div class="modal-grid instituciones-modal">
                     <div class="modal-image">
                         <img src="img/espacio.jpg" alt="Nuestras instituciones" onerror="this.src='https://via.placeholder.com/500x500?text=Nuestras+sedes'">
                     </div>
@@ -280,20 +291,20 @@ function openBookModal(bookNumber) {
             description: 'Desarrolla habilidades para mantener conversaciones fluidas. Técnicas para iniciar, mantener y finalizar diálogos, expresar opiniones y participar en discusiones.'
         },
         4: {
-            title: 'English Communication',
-            level: 'B2',
+            title: 'Business English',
+            level: 'B1',
             image: 'img/libro4.png',
             description: 'Inglés enfocado al ámbito profesional. Vocabulario general presentaciones efectivas y comunicación en entornos de cualquier tipo.'
         },
         5: {
             title: 'Advanced Grammar',
-            level: 'C1',
+            level: 'B2',
             image: 'img/libro5.png',
             description: 'Gramática avanzada para dominar estructuras complejas. Condicionales, voz pasiva, estilo indirecto y otros temas gramaticales de nivel superior.'
         },
         6: {
-            title: 'Final Preparation',
-            level: 'C2',
+            title: 'TOEFL Preparation',
+            level: 'C1',
             image: 'img/libro6.png',
             description: 'Preparación especializada para el examen. Estrategias, ejercicios prácticos y simulacros para obtener la mejor puntuación en tu certificación.'
         }
@@ -304,11 +315,11 @@ function openBookModal(bookNumber) {
     if (book) {
         modalTitle.textContent = book.title;
         modalContent.innerHTML = `
-            <div class="modal-grid">
-                <div class="modal-image">
+            <div class="book-modal-grid">
+                <div class="book-modal-image">
                     <img src="${book.image}" alt="${book.title}" onerror="this.src='https://via.placeholder.com/500x500?text=${book.title}'">
                 </div>
-                <div class="modal-text">
+                <div class="book-modal-text">
                     <h3>${book.title}</h3>
                     <p><span class="highlight">Nivel ${book.level}</span></p>
                     <p>${book.description}</p>
