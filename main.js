@@ -4,28 +4,24 @@ const mobileMenu = document.getElementById('mobileMenu');
 const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
 const mobileMenuClose = document.getElementById('mobileMenuClose');
 
-function closeMobileMenu() {
-    mobileMenu.classList.remove('active');
-    mobileMenuOverlay.classList.remove('active');
-    if (mobileMenuBtn) {
-        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    }
-    document.body.style.overflow = 'auto';
-}
-
 function toggleMobileMenu() {
     mobileMenu.classList.toggle('active');
     mobileMenuOverlay.classList.toggle('active');
     
     if (mobileMenu.classList.contains('active')) {
-        if (mobileMenuBtn) {
-            mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
-        }
+        mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
         document.body.style.overflow = 'hidden';
     } else {
-        if (mobileMenuBtn) {
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-        }
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function closeMobileMenu() {
+    if (mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
         document.body.style.overflow = 'auto';
     }
 }
@@ -34,7 +30,6 @@ if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', toggleMobileMenu);
 }
 
-// Cerrar con el botón X
 if (mobileMenuClose) {
     mobileMenuClose.addEventListener('click', closeMobileMenu);
 }
