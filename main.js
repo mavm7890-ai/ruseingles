@@ -1,43 +1,62 @@
-// Mobile Menu Toggle
+// Mobile Menu Toggle - MEJORADO
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
 const mobileMenuClose = document.getElementById('mobileMenuClose');
 
+function closeMobileMenu() {
+    if (mobileMenu) {
+        mobileMenu.classList.remove('active');
+    }
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.classList.remove('active');
+    }
+    if (mobileMenuBtn) {
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+    document.body.style.overflow = 'auto';
+}
+
 function toggleMobileMenu() {
-    mobileMenu.classList.toggle('active');
-    mobileMenuOverlay.classList.toggle('active');
+    if (mobileMenu) {
+        mobileMenu.classList.toggle('active');
+    }
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.classList.toggle('active');
+    }
     
-    if (mobileMenu.classList.contains('active')) {
-        mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+    if (mobileMenu && mobileMenu.classList.contains('active')) {
+        if (mobileMenuBtn) {
+            mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+        }
         document.body.style.overflow = 'hidden';
     } else {
-        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        if (mobileMenuBtn) {
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
         document.body.style.overflow = 'auto';
     }
 }
 
-function closeMobileMenu() {
-    if (mobileMenu.classList.contains('active')) {
-        mobileMenu.classList.remove('active');
-        mobileMenuOverlay.classList.remove('active');
-        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-        document.body.style.overflow = 'auto';
-    }
-}
-
+// Evento para abrir/cerrar con el botón de hamburguesa
 if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', toggleMobileMenu);
 }
 
+// Evento para cerrar con el botón X (tache)
 if (mobileMenuClose) {
-    mobileMenuClose.addEventListener('click', closeMobileMenu);
+    mobileMenuClose.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeMobileMenu();
+    });
 }
 
+// Evento para cerrar con el overlay
 if (mobileMenuOverlay) {
     mobileMenuOverlay.addEventListener('click', closeMobileMenu);
 }
 
+// Cerrar al hacer clic en cualquier enlace del menú
 document.querySelectorAll('.mobile-nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         if (mobileMenu && mobileMenu.classList.contains('active')) {
